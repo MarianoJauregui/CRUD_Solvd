@@ -1,4 +1,4 @@
-package com.solvd.daos;
+package daos;
 
 public interface IBaseDAO<T> {
 

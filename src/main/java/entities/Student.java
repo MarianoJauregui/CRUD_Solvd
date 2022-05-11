@@ -1,14 +1,27 @@
-package com.solvd.entities;
+package entities;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "Student")
 public class Student {
-    public long getId() {
+
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String email;
+
+    @XmlAttribute
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
+    @XmlElement
     public String getFirstName() {
         return firstName;
     }
@@ -17,6 +30,7 @@ public class Student {
         this.firstName = firstName;
     }
 
+    @XmlElement
     public String getLastName() {
         return lastName;
     }
@@ -25,6 +39,7 @@ public class Student {
         this.lastName = lastName;
     }
 
+    @XmlElement
     public String getEmail() {
         return email;
     }
@@ -33,18 +48,14 @@ public class Student {
         this.email = email;
     }
 
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-
-    public Student(long id, String firstName, String lastName, String email) {
+    public Student(Long id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
+    @Override
     public String toString() {
         return "Student --> " + "\n" +
                 "Id: " + id + "\n" +

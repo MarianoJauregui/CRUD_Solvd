@@ -1,4 +1,4 @@
-package com.solvd.entities;
+package entities;
 
 public class Principal {
 }

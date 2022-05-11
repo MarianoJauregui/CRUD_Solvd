@@ -1,4 +1,4 @@
-package com.solvd.JDBC;
+package JDBC;
 
 import java.sql.*;
 

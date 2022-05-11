@@ -1,6 +1,6 @@
-package com.solvd.daos;
+package daos;
 
-import com.solvd.entities.Student;
+import entities.Student;
 
 public interface IStudentDAO extends IBaseDAO<Student>{
 }
