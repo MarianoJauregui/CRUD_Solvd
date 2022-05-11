@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="LogToFileAirport" fileName="${sys:logs:-logs}/airport.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name ="LogToFileCollection" fileName="${sys:logs:-logs}/collections.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name ="LogToFileApacheUtils" fileName="${sys:logs:-logs}/apacheUtils.log">
+            <LevelRangeFilter minLevel="ERROR" maxLevel="FATAL" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+
+    </Appenders>
+
+
+    <Loggers>
+        <Logger name="com.solvd.solvdPractice.airport" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFileAirport"/>
+        </Logger>
+        <Logger name="com.solvd.solvdPractice.collections" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFileCollection"/>
+        </Logger>
+
+        <Logger name="com.solvd.solvdPractice.apacheUtils" additivity="false">
+            <AppenderRef ref="LogToFileApacheUtils"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Logger name="com.solvd.solvdPractice.enums" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Logger name="com.solvd.solvdPractice.reflectionPractice" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Logger name="com.solvd.dataBases.university" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Root level="error">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFileAirport"/>
+        </Root>
+
+
+    </Loggers>
+
+</Configuration>
