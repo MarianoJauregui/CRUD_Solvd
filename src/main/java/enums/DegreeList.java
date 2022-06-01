@@ -1,11 +1,12 @@
 package enums;
 
-public enum Degree {
-    LAWYER("Lawyer");
+public enum DegreeList {
+    LAWYER("Lawyer"),
+    PHILOSOPHER("Philosopher");
 
     private final String degree;
 
-    Degree(String degree){
+    DegreeList(String degree){
         this.degree = degree;
     }
 

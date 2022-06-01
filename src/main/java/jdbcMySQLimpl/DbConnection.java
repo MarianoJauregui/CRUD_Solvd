@@ -1,4 +1,4 @@
-package JDBC;
+package jdbcMySQLimpl;
 
 import java.sql.*;
 

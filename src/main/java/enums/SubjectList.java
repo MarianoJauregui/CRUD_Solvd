@@ -1,6 +1,6 @@
 package enums;
 
-public enum Subject {
+public enum SubjectList {
     HIST("History"),
     POL_SCI("Political science"),
     ROM_LAW("Roman law"),
@@ -9,7 +9,7 @@ public enum Subject {
     
     private final String subject;
 
-     Subject(String subject){
+     SubjectList(String subject){
         this.subject = subject;
     }
     
