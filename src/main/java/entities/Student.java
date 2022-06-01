@@ -3,6 +3,7 @@ package entities;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
 @XmlRootElement(name = "Student")
 public class Student {
@@ -11,12 +12,40 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
+    //One to one relationship
+    private University university;
+    //One to many relationship
+    private List<Degree> degrees;
+    private List<Subject> subjects;
 
     public Student(Long id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public University getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(University university) {
+        this.university = university;
+    }
+
+    public List<Degree> getDegrees() {
+        return degrees;
+    }
+
+    public void setDegrees(List<Degree> degrees) {
+        this.degrees = degrees;
+    }
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 
     @XmlAttribute
@@ -62,6 +91,5 @@ public class Student {
                 "Name: " + firstName + "\n" +
                 "Last name: " + lastName + "\n" +
                 "E-mail: " + email + ".";
-
     }
 }
