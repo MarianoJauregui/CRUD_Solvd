@@ -12,6 +12,13 @@ public class Student {
     private String lastName;
     private String email;
 
+    public Student(Long id, String firstName, String lastName, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
     @XmlAttribute
     public Long getId() {
         return id;
@@ -45,13 +52,6 @@ public class Student {
     }
 
     public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Student(Long id, String firstName, String lastName, String email) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.email = email;
     }
 

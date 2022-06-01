@@ -3,12 +3,14 @@ package JDBC;
 import java.sql.*;
 
 public class DbConnection {
-    private static final String jdbc = "jdbc:mysql://jauregui_mariano:3306/jauregui_mariano";
-    private static final String jdbcUser = "root";
-    private static final String jdbcPassword = "devintern";
+
+    //This is my personal db connection.
+    private static final String JDBC = "jdbc:mysql://localhost:3306/jauregui_mariano?useSSL=false";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "123456";
 
     public static Connection conection() throws SQLException{
-        return DriverManager.getConnection(jdbc, jdbcUser, jdbcPassword);
+        return DriverManager.getConnection(JDBC, JDBC_USER, JDBC_PASSWORD);
     }
 
 }

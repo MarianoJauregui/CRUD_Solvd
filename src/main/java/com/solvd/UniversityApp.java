@@ -19,22 +19,14 @@ public class UniversityApp {
 
         Student student = new Student(1L, "Mariano", "Jauregui", "asd@asd.com");
 
-        String jdbc = "jdbc:mysql://localhost:3306/jauregui_mariano?useSSL=false";
+
         final String CREATE_TABLE = "CREATE DATABASE Employee";
         PreparedStatement statement = null;
 
-        try{
-            Connection conexion = DriverManager.getConnection(jdbc, "root", "123456" );
-            System.out.println("Im in.");
-            statement = conexion.prepareStatement(CREATE_TABLE);
-            statement.executeUpdate();
-            System.out.println("Table created");
-            conexion.close();
-        } catch (SQLException e){
-            LOGGER.error(e);
-        }
+        // TODO: 12/5/2022 Implement SQL Methods (Select, Insert, Update, Delete, Find)
 
 
+/*
         try{
             JAXBContext contextObj = JAXBContext.newInstance(Student.class);
             Marshaller marshallerObj = contextObj.createMarshaller();
@@ -43,6 +35,8 @@ public class UniversityApp {
         } catch(JAXBException e) {
             LOGGER.error(e.getMessage());
         }
+
+ */
 
     }
 }
