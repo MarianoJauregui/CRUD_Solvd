@@ -1,6 +1,5 @@
 package threadExample;
 
-import entities.Student;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,21 +11,53 @@ public class MultiThreading {
     private static final Logger LOGGER = LogManager.getLogger(MultiThreading.class);
 
     public static void main(String[] args) {
-        Student student1 = new Student(1L, "Mariano1", "Jauregui", "asd@asd.com");
-        Student student2 = new Student(2L, "Mariano2", "Jauregui", "asd@asd.com");
-        Student student3 = new Student(3L, "Mariano3", "Jauregui", "asd@asd.com");
-        Student student4 = new Student(4L, "Mariano4", "Jauregui", "asd@asd.com");
-        Student student5 = new Student(5L, "Mariano5", "Jauregui", "asd@asd.com");
+        Car c1 = new Car();
+        Car c2 = new Car();
+        Car c3 = new Car();
+        Car c4 = new Car();
+        Car c5 = new Car();
+        Car1 c6 = new Car1();
+        Car1 c7 = new Car1();
 
-        ThreadPoolExecutor tpe = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
-        tpe.submit(
-                () -> {LOGGER.info("Running threads");
+        ThreadPoolExecutor tp = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+        tp.submit(() -> {
+            LOGGER.info("Executing threads");
         });
-        tpe.execute((Runnable) student1);
-        tpe.execute((Runnable) student2);
-        tpe.execute((Runnable) student3);
-        tpe.execute((Runnable) student4);
-        tpe.execute((Runnable) student5);
+        tp.execute(c1);
+        tp.execute(c2);
+        tp.execute(c3);
+        tp.execute(c4);
+        tp.execute(c5);
+        tp.execute(c6);
+        tp.execute(c7);
+        tp.shutdown();
 
     }
+
+    public static class Car extends Thread {
+
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            LOGGER.info("Called from the Car Class");
+        }
+    }
+
+    public static class Car1 implements Runnable {
+
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            LOGGER.info("Called from the Car1 Class");
+        }
+    }
 }
+

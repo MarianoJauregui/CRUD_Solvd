@@ -11,21 +11,28 @@
         </File>
     </Appenders>
     <Loggers>
-        <Logger name="org.example" level="debug" additivity="false">
+
+        <Logger name="org.example" level="info" additivity="false">
             <AppenderRef ref="LogToConsole"/>
         </Logger>
+
         <Root level="error">
             <AppenderRef ref="LogToConsole"/>
         </Root>
+
     </Loggers>
+
     <Loggers>
-        <Logger name="org.example" level="debug" additivity="false">
+
+        <Logger name="org.example" level="info" additivity="false">
             <AppenderRef ref="LogToFile"/>
             <AppenderRef ref="LogToConsole"/>
         </Logger>
+
         <Logger name="org.examplet" level="error" additivity="false">
             <AppenderRef ref="LogToConsole"/>
         </Logger>
+
         <Root level="error">
             <AppenderRef ref="LogToFile"/>
             <AppenderRef ref="LogToConsole"/>

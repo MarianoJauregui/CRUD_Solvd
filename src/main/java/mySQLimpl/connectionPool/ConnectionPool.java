@@ -4,7 +4,6 @@ import java.util.concurrent.BlockingQueue;
 
 public class ConnectionPool extends AbstractPool {
 
-
     // This would be a general realization.
     // private final static ConnectionPool instance = new ConnectionPool();
 

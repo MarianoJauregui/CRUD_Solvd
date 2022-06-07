@@ -1,10 +1,15 @@
 package mySQLimpl;
 
 import daos.IBaseDAO;
+import mySQLimpl.connectionPool.ConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class BaseDAO<T> implements IBaseDAO<T> {
@@ -26,7 +31,48 @@ public class BaseDAO<T> implements IBaseDAO<T> {
         getObjectFields = new ConcurrentHashMap<>();
     }
 
+    @Override
+    public T getEntityById(Long id) {
+        return null;
+    }
+
+    @Override
+    public void saveEntityById(T entity) {
+
+    }
+
+    @Override
+    public void removeEntityById(T entity) {
+
+    }
+
+    @Override
+    public void updateEntityById(T entity) {
+
+    }
+/*
+    @Override
+    public T getEntityById(Long id){
+        startConnection();
+/*
+        String selectStatement =
+                "SELECT * FROM " + this.TABLE_NAME + " WHERE " + ID.getAttribute() + " = " + id + ";";
+
+        T resultEntity = null;
+        try(PreparedStatement getEntity = connection.prepareStatement(selectStatement));
+        ResultSet resultSet = getEntity.executeQuery()){
+
+    resultEntity = this.parseResultSet(resultSet);
+        }
+    }
 
 
-
+    private void startConnection(){
+        try{
+            this.connection = ConnectionPool.getInstance().getConnection();
+        } catch (SQLException | IOException e) {
+            LOGGER.error(e.getMessage());
+            this.startConnection();
+        }
+    }*/
 }
