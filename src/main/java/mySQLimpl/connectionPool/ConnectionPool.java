@@ -1,4 +1,4 @@
-package jdbcMySQLimpl;
+package mySQLimpl.connectionPool;
 
 import java.util.concurrent.BlockingQueue;
 
