@@ -28,7 +28,6 @@ public class Student {
     public University getUniversity() {
         return university;
     }
-
     public void setUniversity(University university) {
         this.university = university;
     }
@@ -36,7 +35,6 @@ public class Student {
     public List<Degree> getDegrees() {
         return degrees;
     }
-
     public void setDegrees(List<Degree> degrees) {
         this.degrees = degrees;
     }
@@ -52,7 +50,6 @@ public class Student {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -61,7 +58,6 @@ public class Student {
     public String getFirstName() {
         return firstName;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -70,7 +66,6 @@ public class Student {
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -79,7 +74,6 @@ public class Student {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
