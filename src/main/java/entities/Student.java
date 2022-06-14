@@ -18,6 +18,8 @@ public class Student {
     private List<Degree> degrees;
     private List<Subject> subjects;
 
+    public Student(){};
+
     public Student(Long id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;

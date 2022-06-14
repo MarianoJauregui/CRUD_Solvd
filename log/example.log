@@ -1,0 +1,13 @@
+2022-06-14 08:58:49,383 ERROR p.JacksonParser [main] src\parsers\mapper.json (El sistema no puede encontrar la ruta especificada)
+2022-06-14 09:06:45,044 ERROR p.JacksonParser [main] Unrecognized token 'C': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"C:/Users/PC/IdeaProjects/CRUD_Solvd/src/main/java/parsers/mapper.json"; line: 1, column: 2]
+2022-06-14 09:10:07,078 ERROR p.JacksonParser [main] Unrecognized token 'C': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"C:/Users/PC/IdeaProjects/CRUD_Solvd/src/main/java/parsers/mapper.json"; line: 1, column: 2]
+2022-06-14 09:11:33,639 ERROR p.JacksonParser [main] Unrecognized token 'C': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"C:/Users/PC/IdeaProjects/CRUD_Solvd/src/main/java/parsers/mapper.json"; line: 1, column: 2]
+2022-06-14 09:13:33,432 ERROR p.JacksonParser [main] Unrecognized token 'mapper': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"mapper.json"; line: 1, column: 7]
+2022-06-14 09:20:19,549 ERROR p.JacksonParser [main] Cannot construct instance of `entities.Student` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 2]
+2022-06-14 09:24:39,801 ERROR p.JacksonParser [main] Cannot construct instance of `entities.Student` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 2]
