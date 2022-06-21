@@ -1,4 +1,4 @@
-package daos;
+package daos.interfaces;
 
 import entities.Degree;
 import entities.Student;

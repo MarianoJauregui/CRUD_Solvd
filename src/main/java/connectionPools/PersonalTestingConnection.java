@@ -1,8 +1,8 @@
-package mySQLimpl.connectionPool;
+package connectionPools;
 
 import java.sql.*;
 
-public class DbConnection {
+public class PersonalTestingConnection {
 
     //This is my personal db connection.
     private static final String JDBC = "jdbc:mysql://localhost:3306/jauregui_mariano?useSSL=false";
