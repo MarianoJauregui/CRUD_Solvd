@@ -6,6 +6,15 @@ public class Teacher {
     private String lastName;
     private University university;
 
+    public Teacher(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Teacher() {
+
+    }
+
     public Long getId() {
         return id;
     }

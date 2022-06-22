@@ -1,12 +1,20 @@
 package daos.interfaces;
 
-import exceptions.NoSuchThingWasFound;
+import exceptions.DAOImplException;
 
-public interface IBaseDAO<T> {
+import java.sql.SQLException;
+import java.util.List;
 
-    T getEntityById(Long id) throws NoSuchThingWasFound;
-    void saveEntityById(T entity) throws NoSuchThingWasFound;
-    void removeEntityById(T entity) throws NoSuchThingWasFound;
-    void updateEntityById(T entity) throws NoSuchThingWasFound;
+public interface IBaseDAO<T, K> {
+
+    List<T> list();
+
+    T getEntityById(Long id) throws DAOImplException;
+
+    void saveEntityById(T entity) throws DAOImplException, SQLException;
+
+    void removeEntityById(T entity) throws DAOImplException;
+
+    void updateEntityById(T entity) throws DAOImplException;
 
 }

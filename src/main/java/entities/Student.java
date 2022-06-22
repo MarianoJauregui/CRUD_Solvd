@@ -1,11 +1,8 @@
 package entities;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+
 import java.util.List;
 
-@XmlRootElement(name = "Student")
 public class Student {
 
     private Long id;
@@ -18,9 +15,15 @@ public class Student {
     private List<Degree> degrees;
     private List<Subject> subjects;
 
-    public Student(){};
+    public Student(){}
 
-    public Student(Long id, String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public Student(Long id, String firstName, String lastName, String email){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -48,7 +51,7 @@ public class Student {
         this.subjects = subjects;
     }
 
-    @XmlAttribute
+
     public Long getId() {
         return id;
     }
@@ -56,7 +59,7 @@ public class Student {
         this.id = id;
     }
 
-    @XmlElement
+
     public String getFirstName() {
         return firstName;
     }
@@ -64,7 +67,7 @@ public class Student {
         this.firstName = firstName;
     }
 
-    @XmlElement
+
     public String getLastName() {
         return lastName;
     }
@@ -72,7 +75,7 @@ public class Student {
         this.lastName = lastName;
     }
 
-    @XmlElement
+
     public String getEmail() {
         return email;
     }
